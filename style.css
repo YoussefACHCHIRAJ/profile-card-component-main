@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+ :root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+body{
+    background: var(--Dark-cyan);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+body::after, 
+body::before{
+    content: "";
+    position: absolute;
+}
+body::before{
+    width: 30em;
+    height: 30em;
+    top: 0; left: 0;
+    transform: rotate(180deg);
+    background-image: url(images/bg-pattern-top.svg);
+}
+body::after{
+    width: 40em;
+    height: 20em;
+    background-image: url(images/bg-pattern-bottom.svg);
+    bottom: 0; right: 0;
+}
+@media (max-width: 950px){
+    body::before{
+        width: 20em;
+        height: 20em;
+    }
+    body::after{
+        width: 20em;
+        height: 15em;
+    }
+}
+main{
+    width: min(calc(100% - 7em) , 60vh);
+    min-height: 28.5em;
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+main::after{
+    content: "";
+    width: 100%;
+    height: 36%;
+    z-index: -2;
+    position: absolute;
+    top: 0; left: 0;
+    background-image: url(images/bg-pattern-card.svg);
+}
+
+.image_box{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background: #fff;
+    margin-inline:auto;
+    margin-block-start:  6em; 
+    padding: .5em;
+}
+img{
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+}
+.about{
+    text-align: center;
+}
+.about h2{
+    font-weight: 700;
+    color: var(--grayish-blue);
+    opacity: .85;
+    margin-block: .8em .5em;
+}
+.about h2 span , .country{
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+}
+.profile{
+    width: 100%;
+    height: 5em;
+    align-items: flex-end;
+    display: flex;
+    margin-block-start: 3em;
+    justify-content: space-around;
+    padding-inline: 1em;
+    border-top: .2px solid lightgray;
+}
+.profile p{
+    text-align: center;
+    font-weight: 700;
+    min-height: 3em;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+.profile p span{
+    color: var(--Dark-gray);
+    font-weight: 400;
+    font-size: 1rem;
+}
+.attribution{
+     font-size: 1rem;
+     text-align: center;
+     margin-top: 1em;
+     color: var(--Very-dark-desaturated-blue);
+}
+.attribution a{
+    text-decoration: none;
+    color: #fff
+    
+}
