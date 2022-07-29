@@ -49,7 +49,7 @@ body::after{
     }
 }
 main{
-    width: min(calc(100% - 7em) , 60vh);
+    width: min(calc(100% - 2em) , 60vh);
     min-height: 28.5em;
     border-radius: 10px;
     background: #fff;
